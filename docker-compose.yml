@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  hotelchatbot:
+    image: dockseroot1234/hotel-chatbot-backend:latest  # Correct image name
+    ports:
+      - "5001:5001"
+    environment:
+      - DATABASE_URL=Server=your-database-host.onrender.com;Port=3306;Database=HotelDb;User=root;Password=Root%401234
