@@ -88,6 +88,7 @@
 /home/josphine/Desktop/aiT/HotelChatbotBackend/obj/Debug/net8.0/HotelChatbotBackend.csproj.CoreCompileInputs.cache
 /home/josphine/Desktop/aiT/HotelChatbotBackend/obj/Debug/net8.0/HotelChatbotBackend.MvcApplicationPartsAssemblyInfo.cs
 /home/josphine/Desktop/aiT/HotelChatbotBackend/obj/Debug/net8.0/HotelChatbotBackend.MvcApplicationPartsAssemblyInfo.cache
+/home/josphine/Desktop/aiT/HotelChatbotBackend/obj/Debug/net8.0/HotelChatbotBackend.sourcelink.json
 /home/josphine/Desktop/aiT/HotelChatbotBackend/obj/Debug/net8.0/staticwebassets.build.json
 /home/josphine/Desktop/aiT/HotelChatbotBackend/obj/Debug/net8.0/staticwebassets.development.json
 /home/josphine/Desktop/aiT/HotelChatbotBackend/obj/Debug/net8.0/staticwebassets/msbuild.HotelChatbotBackend.Microsoft.AspNetCore.StaticWebAssets.props

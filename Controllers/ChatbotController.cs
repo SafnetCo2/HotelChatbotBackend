@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using HotelChatbotBackend.Models;
 using HotelChatbotBackend.Data;
+using System.Linq;
 
 namespace HotelChatbotBackend.Controllers
 {
@@ -33,6 +34,22 @@ namespace HotelChatbotBackend.Controllers
             _context.ChatMessages.Add(message);
             _context.SaveChanges();
             return CreatedAtAction(nameof(GetMessages), new { id = message.Id }, message);
+        }
+
+        // GET: api/chatbot/users
+        [HttpGet("users")]
+        public IActionResult GetUsers()
+        {
+            var users = _context.Users.ToList();
+            return Ok(users);
+        }
+
+        // GET: api/chatbot/hotelbookings
+        [HttpGet("hotelbookings")]
+        public IActionResult GetHotelBookings()
+        {
+            var hotelBookings = _context.HotelBookings.ToList();
+            return Ok(hotelBookings);
         }
     }
 }
