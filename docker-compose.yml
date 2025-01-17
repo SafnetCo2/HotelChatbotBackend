@@ -1,4 +1,4 @@
-
+version: '3.3'
 services:
   hotelchatbot:
     image: dockseroot1234/hotel-chatbot-backend:latest  # Correct image name
