@@ -1,8 +1,11 @@
 version: '3.3'
 services:
   hotelchatbot:
-    image: dockseroot1234/hotel-chatbot-backend:latest  # Correct image name
+    image: dockseroot1234/hotel-chatbot-backend:latest
     ports:
       - "5001:5001"
     environment:
-      - DATABASE_URL=Server=your-database-host.onrender.com;Port=3306;Database=HotelDb;User=root;Password=Root%401234
+      # For local development (MySQL running in Docker):
+      - DATABASE_URL=Server=172.18.0.2;Port=3306;Database=HotelDb;User=root;Password=Root%401234
+      # For Render production deployment (use the Render database URL):
+      # - DATABASE_URL=Server=your-database-host.onrender.com;Port=3306;Database=HotelDb;User=root;Password=YourPasswordHere

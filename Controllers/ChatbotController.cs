@@ -51,5 +51,16 @@ namespace HotelChatbotBackend.Controllers
             var hotelBookings = _context.HotelBookings.ToList();
             return Ok(hotelBookings);
         }
+
+        // GET: api/chatbot/test-db
+        [HttpGet("test-db")]
+        public IActionResult TestDatabase()
+        {
+            var result = _context.Database.CanConnect();
+            if (result)
+                return Ok("Database connection successful!");
+            else
+                return BadRequest("Database connection failed!");
+        }
     }
 }

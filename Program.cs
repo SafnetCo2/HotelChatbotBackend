@@ -11,7 +11,8 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
     {
-        policy.AllowAnyOrigin()
+        // Allow specific origins, you can replace with actual allowed origin.
+        policy.WithOrigins("https://hotelchatbot-1.onrender.com") // Allow Render URL
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
