@@ -6,6 +6,17 @@ using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Enable CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 // Load the connection string from the configuration
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseMySql(
@@ -20,7 +31,9 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// Configure middleware
+// Use CORS middleware
+app.UseCors("AllowAll");
+
 app.UseHttpsRedirection();
 app.MapControllers();
 
